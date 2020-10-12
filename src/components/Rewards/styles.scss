@@ -1,0 +1,60 @@
+@charset 'utf-8';
+@import '../../globals/utils.scss';
+@import '../../globals/mixins.scss';
+
+section[id="rewards"] {
+  background: $tertiary;
+  padding: 5rem 4rem 0 4rem;
+  @media (min-width:$mobile-lg) {
+    padding: 5em 2em;
+  }
+  @media (min-width:$tablet-md) {
+    @include grid;
+    padding: 5rem 4rem 0 4rem;
+    align-items: center;
+  }
+  @media (min-width:$tablet-lg) {
+    height: 85vh;
+  }
+  > aside {
+    > h2 {
+       font-size: 2.7rem;
+       color: $secondary;
+       margin-bottom: 1rem;
+        @media (min-width:$tablet-md) {
+          font-size: 5rem;
+          line-height: 8.5rem;
+        }
+     }
+     > p {
+       color: #fff;
+       font-size: 2.6rem;
+       font-family: $medium;
+       @media (min-width:$tablet-md) {
+         margin-top: 3rem;
+          line-height: 5rem;
+       }
+
+     }
+     > span {
+       color: #fff;
+       margin: 2rem 0;
+       display: flex;
+       font-family: $medium;
+     }
+  }
+    > figure {
+      @media (min-width:$tablet-lg) {
+        display: flex;
+        justify-content:center
+      }
+    > img {
+      @include flexCenter;
+      width: 100%;
+      margin-top: 2rem;
+      @media (min-width:$tablet-md) {
+        width: 60%
+      }
+    }
+  }
+}

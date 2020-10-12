@@ -1,0 +1,59 @@
+@charset 'utf-8';
+@import '../../globals/utils.scss';
+@import '../../globals/mixins.scss';
+
+
+section[id="credit-card"] {
+  background: #fff;
+  @media (min-width:500px) and (max-width: $mobile-lg) {
+    padding: 5rem 2rem;
+  }
+  @media (min-width:$tablet-md) {
+   @include grid;
+      padding: 5rem 4rem 0 4rem;
+  }
+  > aside {
+      > h2 {
+        font-size: 2.7rem;
+        color: $main;
+        @media (min-width:$tablet-md) {
+          font-size: 4rem;
+          line-height: 7rem;
+        }
+      }
+      >p {
+        color: $black;
+        font-size: 2.66rem;
+        font-family: $medium;
+        @media (min-width:500px) and (max-width: $mobile-lg) {
+          padding-right: 10em;
+          line-height:3rem
+        }
+        @media (min-width:$tablet-md) {
+          font-size: 4.3rem;
+        }
+        @media (min-width:$computer-sm) {
+          font-size: 3.3em;
+          line-height: 6.5rem;
+        }
+      }
+      > span {
+        color: $main;
+        margin: 2rem 0;
+        display: flex;
+        font-family: $medium;
+      }
+  }
+  > figure {
+    display: flex;
+    justify-content: center;
+    > img {
+      @include flexCenter;
+      width: 100%;
+      margin-top: 2rem;
+      @media (min-width:$tablet-lg) {
+       width: 38%;
+      }
+    }
+  }
+}

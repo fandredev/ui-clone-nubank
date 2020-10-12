@@ -1,0 +1,56 @@
+@charset 'utf-8';
+@import '../../globals/utils.scss';
+@import '../../globals/mixins.scss';
+
+section[id="pandemic-instructions"] {
+  background-color: #fff;
+  @media (min-width:500px) and (max-width: $mobile-lg) {
+    padding: 5rem 2rem;
+  }
+  @media (min-width:$tablet-md) {
+    @include grid;
+    padding: 5rem 4rem 0 4rem;
+  }
+  > aside {
+    @media (min-width:$tablet-lg) {
+      align-self: center;
+    }
+    > h2 {
+        color: $black;
+        font-size: 2.6rem;
+        line-height: 3.5rem;
+        @media (min-width:500px) and (max-width: $mobile-lg) {
+          padding-right: 10em;
+          line-height: 4.5rem;
+        }
+        @media (min-width:$tablet-md) {
+          font-size: 2.8em;
+          line-height: 5.5rem;
+        }
+        @media (min-width:$computer-sm) {
+          font-size: 3.3em;
+          line-height: 7.5rem;
+        }
+      }
+      > p {
+        color: $main;
+        display: flex;
+        font-size: 1.8rem;
+        font-family: $medium;
+        margin-bottom: 3em;
+         @media (min-width:$tablet-md) {
+         margin-top: 3rem;
+        }
+      }
+  }
+  > figure {
+    > img {
+      @include flexCenter;
+      width: 100%;
+      margin-top: 2rem;
+      @media (min-width:$mobile-lg) {
+        padding: 0 2rem;
+      }
+    }
+  }
+}

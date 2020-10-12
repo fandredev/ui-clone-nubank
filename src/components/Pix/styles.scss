@@ -1,0 +1,73 @@
+@charset 'utf-8';
+@import '../../globals/utils.scss';
+@import '../../globals/mixins.scss';
+
+main {
+  height: 60%;
+  background-color: $main;
+  padding: 5rem 2rem;
+  color: #fff;
+  margin-top: 3rem;
+  @media (min-width:$mobile-lg) {
+    padding: 5em 2em;
+  }
+  @media (min-width:$tablet-md) {
+    @include grid;
+    padding: 5rem 4rem 4rem;
+  }
+  > aside {
+    @media (min-width:$tablet-lg) {
+      padding: 10rem;
+      gap: 3rem;
+      align-self: center
+    }
+    > h2{
+      font-size: 2.7rem;
+      line-height: 3.1rem;
+      font-family: $regular;
+      @media (min-width:500px) and (max-width: $mobile-lg) {
+       padding: 0 26rem 0 0;
+       line-height: 5rem;
+      }
+      @media (min-width:$tablet-md) {
+       font-size: 4.6rem;
+       line-height: 7rem;
+      }
+    }
+
+    > p {
+      margin: 2rem 0;
+      display: flex;
+      font-family:$medium;
+    }
+   > button[type="button"] {
+      color: $main;
+      padding: 1.6rem;
+      font-family:$medium;
+      width: 70%;
+      border-radius: 25px;
+      font-size: 1.7rem;
+      border: 1px solid transparent;
+     @media (min-width:500px) and (max-width: $mobile-lg) {
+        width: 35%;
+        line-height: 2rem;
+      }
+      @media (min-width:$tablet-md) {
+        max-width: 60%;
+      }
+    }
+  }
+  > figure {
+    @media (min-width:$tablet-lg) {
+      @include flexCenter;
+    }
+    > img {
+      @include flexCenter;
+      width: 100%;
+      margin-top: 2rem;
+      @media (min-width:$tablet-lg) {
+        width: 50%;
+      }
+    }
+  }
+}

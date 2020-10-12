@@ -1,0 +1,83 @@
+@charset 'utf-8';
+@import '../../globals/utils.scss';
+@import '../../globals/mixins.scss';
+
+footer {
+  background-color: $black;
+  color: #fff;
+  padding: 2rem;
+
+  > div {
+    @media (min-width:$tablet-md) {
+      @include grid;
+    }
+    > ol {
+      @media (min-width:$tablet-md) {
+        padding-left: 3rem;
+      }
+      > h2 {
+        margin: 5rem 0;
+        font-weight: 100;
+      }
+      > li {
+        margin-top: 1rem;
+        font-size: 1.77rem;
+        display: flex;
+
+        &[id="download-app"] {
+          flex-flow: column wrap;
+         > figure {
+           margin: 2rem 0;
+         }
+        }
+      }
+      &[id="attendence"] {
+        margin-bottom: 3em;
+      }
+      > figure {
+        margin-top: 3rem;
+        max-width: 50%;
+        min-width: 25%;
+    }
+  }
+}
+    > figure[id="nu-logo"] {
+      margin-top: 6em;
+      > img {
+        width: 25%;
+      }
+      @media (min-width:$mobile-lg) {
+          max-width: 35%;
+      }
+    }
+  > aside[id="info"] {
+    > address {
+      line-height: 3rem;
+      font-family: $medium;
+      font-size: 1.44rem;
+      margin-bottom: 5em;
+      @media (min-width:$mobile-lg) {
+        padding-right: 12em;
+      }
+     @media (min-width:$tablet-md) {
+        padding-right: 22em;
+      }
+    }
+    > article {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: 1px solid transparent;
+      margin-bottom: 3em;
+      @media (min-width:$mobile-lg) {
+        justify-content: space-evenly;
+        padding: 0 7rem;
+      }
+      @media (min-width:$tablet-md) {
+        padding: 0;
+        width: 50%;
+        justify-content: space-around;
+      }
+    }
+  }
+}
