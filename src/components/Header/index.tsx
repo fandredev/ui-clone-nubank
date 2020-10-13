@@ -12,10 +12,11 @@ const Header = () => {
   return (
     <header>
       {width < 700 ? <BurgerMenu /> : <Items />}
-      {width < 700 && <figure>
-        <img src={icon} alt="Nubank ícone" />
-      </figure>}
-
+      {width < 700 && (
+        <figure>
+          <img src={icon} alt="Nubank ícone" />
+        </figure>
+      )}
     </header>
   );
 };

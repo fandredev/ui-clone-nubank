@@ -45,8 +45,7 @@ section[id="rewards"] {
   }
     > figure {
       @media (min-width:$tablet-lg) {
-        display: flex;
-        justify-content:center
+        @include flexCenter;
       }
     > img {
       @include flexCenter;

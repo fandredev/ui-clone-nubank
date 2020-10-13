@@ -1,5 +1,6 @@
 @charset 'utf-8';
 @import '../../globals/utils.scss';
+@import '../../globals/mixins.scss';
 
 header {
   font-family: $medium;
@@ -11,16 +12,13 @@ header {
   height: 10%;
   background: #fff;
   > figure {
-    display: flex;
+    @include flexCenter;
     justify-content: flex-end;
-    align-items: center;
     margin-right: 20px;
     > img {
-      width: 18%;
-       @media (min-width:$mobile-lg) {
-        width: 10%;
-        max-width: 10%
-      }
+      width: 15%;
+      max-width: 50px;
+      min-width: 45px;
     }
   }
 }

@@ -2,34 +2,29 @@
 @import '../../../globals/utils.scss';
 @import '../../../globals/mixins.scss';
 
-nav {
-  @include flexCenter;
+nav[id="items"] {
   height: 100%;
-  > ol {
   display: flex;
+  > ol {
+  @include flexCenter;
   justify-content:space-around;
-  align-items:center;
   width: 100%;
    @media (min-width:$tablet-lg) {
     padding: 0 3rem;
   }
   > img {
-    width: 7%;
-    max-width: 7%;
-
-    @media (min-width:$tablet-lg) {
-      width: 4%
-    }
+    width: 5%;
+    max-width: 42px;
   }
   > li {
     color:$list;
     font-weight: 500;
-    transition: color 400ms ease;
+    transition: color 0s ease;
     @media (min-width:$tablet-lg) {
       font-size: 18px;
     }
     &:hover {
-      color: $main;
+      color: $hover;
     }
       > button[type="button"] {
         background: $main;

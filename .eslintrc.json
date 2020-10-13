@@ -27,6 +27,7 @@
         "prettier"
     ],
     "rules": {
+      "no-use-before-define":"off",
       "@typescript-eslint/indent": [
         "error",
         2

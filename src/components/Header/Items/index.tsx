@@ -10,37 +10,35 @@ const Items: React.FC = () => {
 
   useEffect(() => ref.current?.focus(), []);
 
-  const context = useContext(NuContext)
-  const { width } = context
+  const context = useContext(NuContext);
+  const { width } = context;
   return (
-    <nav>
+    <nav id="items">
       <ol>
         <img src={icon} alt="Nubank ícone" />
         <li ref={ref}>Ínicio</li>
         <li>Conta digital</li>
         <li>Cartão de crédito</li>
-        {width >= 800 ? (
-           <li>Pix</li>
-        ): ''}
-        {width >= 900 ? (
-          <li>Rewards</li>
-        ): ''}
+        {width >= 800 ? <li>Pix</li> : ""}
+        {width >= 900 ? <li>Rewards</li> : ""}
         <li>Empréstimo</li>
         {width >= 1000 ? (
-            <>
-          <li>
-            <span>Conta PJ</span>
-          </li>
-          <li>
-            <span>Sobre nós</span>
-          </li>
-          <li>
-            <span>Carreiras</span>
-          </li>
+          <>
+            <li>
+              <span>Conta PJ</span>
+            </li>
+            <li>
+              <span>Sobre nós</span>
+            </li>
+            <li>
+              <span>Carreiras</span>
+            </li>
           </>
-        ):''}
+        ) : (
+          ""
+        )}
         <li>
-          <span style={{color: '#8a05be'}}>Login</span>
+          <span style={{ color: "#8a05be" }}>Login</span>
         </li>
         <li>
           <button type="button">Quero ser Nubank</button>

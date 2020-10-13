@@ -126,7 +126,7 @@ const Footer = () => {
           <li>meajuda@nubank.com.br</li>
           <li>Atendimento 24hr</li>
         </ol>
-        <ol>
+        <ol id="download">
           <li>
             <h2>Baixe o App</h2>
           </li>
@@ -145,22 +145,20 @@ const Footer = () => {
           </li>
         </ol>
       </div>
-
-      <figure id="nu-logo">
-        <img src={icon} alt="Nubank logotipo" />
-      </figure>
       <aside id="info">
+        <figure id="nu-logo">
+          <img src={icon} alt="Nubank logotipo" />
+        </figure>
         <address>
           <span>
             &copy;
             {new Date().getFullYear()}
-{' '}
-Nu Pagamentos
-</span>
+            &nbsp; Nu Pagamentos
+          </span>
           <span> S.A 18.236.120/0001-58</span>
           <span> Rua Capote Valente, 39 - São Paulo,&nbsp;</span>
           <span>
-            <abbr title="SP">SP</abbr> - 05409-000
+            <abbr title="SP">SP</abbr> -&nbsp;05409-000
           </span>
         </address>
         <article>

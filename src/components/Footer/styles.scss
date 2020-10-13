@@ -12,6 +12,10 @@ footer {
       @include grid;
     }
     > ol {
+      &[id="download"], &[id="attendence"] {
+        border: 1px solid transparent;
+        border-bottom-color: $footer;
+      }
       @media (min-width:$tablet-md) {
         padding-left: 3rem;
       }
@@ -23,6 +27,7 @@ footer {
         margin-top: 1rem;
         font-size: 1.77rem;
         display: flex;
+        width: max-content;
 
         &[id="download-app"] {
           flex-flow: column wrap;
@@ -31,26 +36,36 @@ footer {
          }
         }
       }
-      &[id="attendence"] {
-        margin-bottom: 3em;
-      }
+
       > figure {
         margin-top: 3rem;
-        max-width: 50%;
         min-width: 25%;
     }
   }
 }
+> aside[id="info"] {
+  @media (min-width:$tablet-lg) {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    margin: 6em 0;
+    padding:0 2rem;
+  }
     > figure[id="nu-logo"] {
       margin-top: 6em;
       > img {
         width: 25%;
+       @media (min-width:$tablet-lg) {
+        width: 100%;
+      }
       }
       @media (min-width:$mobile-lg) {
-          max-width: 35%;
+        max-width: 35%;
+      }
+      @media (min-width:$tablet-lg) {
+        margin: 0;
+        max-width: 75%;
       }
     }
-  > aside[id="info"] {
     > address {
       line-height: 3rem;
       font-family: $medium;
@@ -59,14 +74,19 @@ footer {
       @media (min-width:$mobile-lg) {
         padding-right: 12em;
       }
-     @media (min-width:$tablet-md) {
+      @media (min-width:$tablet-md) {
         padding-right: 22em;
+      }
+      @media (min-width:$tablet-lg) {
+        padding: 0;
+        margin: 0;
+        font-size: 20px;
+        line-height: 4rem;
       }
     }
     > article {
-      display: flex;
+      @include flexCenter;
       justify-content: space-around;
-      align-items: center;
       border: 1px solid transparent;
       margin-bottom: 3em;
       @media (min-width:$mobile-lg) {
@@ -77,6 +97,19 @@ footer {
         padding: 0;
         width: 50%;
         justify-content: space-around;
+      }
+      @media (min-width:$tablet-lg) {
+        margin: 0;
+        width: 100%;
+        padding: 0 7rem;
+      }
+
+      > svg {
+        cursor: pointer;
+        transition: color 0s ease-in;
+        &:hover {
+          color: $hover;
+        }
       }
     }
   }

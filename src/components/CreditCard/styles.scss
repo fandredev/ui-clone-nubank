@@ -45,8 +45,7 @@ section[id="credit-card"] {
       }
   }
   > figure {
-    display: flex;
-    justify-content: center;
+    @include flexCenter;
     > img {
       @include flexCenter;
       width: 100%;
