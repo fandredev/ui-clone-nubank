@@ -18,8 +18,7 @@ const Pix = () => {
         <button type="button">Quero ser Nubank</button>
       </aside>
       <figure>
-
-      <img src={phoneOkay} alt="Pagamento para Helena Ribeiro" />
+        <img src={phoneOkay} alt="Pagamento para Helena Ribeiro" />
       </figure>
     </main>
   );

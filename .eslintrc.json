@@ -28,24 +28,13 @@
     ],
     "rules": {
       "no-use-before-define":"off",
+      "import/no-unresolved":"off",
+      "import/extensions":"off",
+      "react/prop-types":"off",
+      "react/jsx-one-expression-per-line":"off",
       "@typescript-eslint/indent": [
         "error",
         2
-      ],
-      "import/extensions": [
-        "error",
-        "ignorePackages",
-        {
-          "ts": "never",
-          "tsx": "never"
-        }
-      ],
-      "import/no-unresolved": [
-        2,
-        {
-          "commonjs": true,
-          "amd": true
-        }
       ],
       "prettier/prettier":"error",
       "react/jsx-filename-extension": [

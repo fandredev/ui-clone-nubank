@@ -3,17 +3,21 @@
 @import '../../globals/mixins.scss';
 
 section[id="blog"] {
-  height:75vh;
+  @include bgProperties;
   background-image: url('../../assets/images/MenSmileDevice.webp');
-  background-size: cover;
-  background-position: center center;
   flex-flow: column;
   padding: 5rem 3rem;
   @media (min-width:500px) and (max-width: $mobile-lg) {
     padding: 5rem 2rem;
   }
+  @media (min-width:$tablet-md) {
+   padding: 2rem 6rem;
+  }
+  @media (min-width:$tablet-lg) {
+    height: 100vh;
+  }
   > h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-top: 3rem;
     color: #fff;
     line-height: 3rem;
@@ -24,8 +28,8 @@ section[id="blog"] {
       margin-bottom: 3rem;
     }
     @media (min-width:$tablet-md) {
-     padding: 0 22em 0 10px;
-     line-height: 2em;
+     padding: 0 10em 0 10px;
+     line-height: 1.3em;
     }
      @media (min-width:$tablet-lg) {
       font-size:5rem;
@@ -41,7 +45,7 @@ section[id="blog"] {
   > span {
     line-height: 2rem;
     color: #fff;
-    @include flexCenter;
+    display: flex;
     @media (min-width:$mobile-lg) {
       padding: 0 12em 0 10px;
       font-size: 1.5rem;

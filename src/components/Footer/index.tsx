@@ -158,7 +158,7 @@ const Footer = () => {
           <span> S.A 18.236.120/0001-58</span>
           <span> Rua Capote Valente, 39 - São Paulo,&nbsp;</span>
           <span>
-            <abbr title="SP">SP</abbr> -&nbsp;05409-000
+            <abbr title="SP">SP</abbr> -&nbsp; 05409-000
           </span>
         </address>
         <article>

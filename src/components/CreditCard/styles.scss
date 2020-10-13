@@ -5,12 +5,13 @@
 
 section[id="credit-card"] {
   background: #fff;
-  @media (min-width:500px) and (max-width: $mobile-lg) {
-    padding: 5rem 2rem;
-  }
+  padding: 5rem 2rem 0;
   @media (min-width:$tablet-md) {
    @include grid;
-      padding: 5rem 4rem 0 4rem;
+    padding: 5rem 4rem 0 4rem;
+  }
+  @media (min-width:$tablet-lg) {
+    height: 100vh;
   }
   > aside {
       > h2 {

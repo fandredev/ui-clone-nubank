@@ -3,18 +3,15 @@
 @import '../../globals/mixins.scss';
 
 section[id="reinventing"] {
-  height:75vh;
   background-image: url('../../assets/images/peoplesListening.webp');
-  background-size: cover;
-  background-position: center center;
+  @include bgProperties;
   @include flexCenter;
   align-items: inherit;
   flex-flow: column;
   font-family: $medium;
   color: #fff;
-  @media (min-width:500px) and (max-width: $mobile-lg) {
-    padding: 5rem 2rem;
-  }
+  padding: 5rem 2rem;
+
   > p {
     font-size: 3rem;
     line-height:4rem;
@@ -38,12 +35,12 @@ section[id="reinventing"] {
     }
   }
   > span {
-    padding: 0 26rem 0 3rem;
     display: flex;
     margin-top: 3rem;
     @media (min-width:$tablet-md) {
       font-size: 1.6rem;
       display: flex;
+      padding-left:3rem;
     }
   }
 }

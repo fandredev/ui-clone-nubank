@@ -28,7 +28,8 @@ export default function NuProvider({ children }: ChildrenProps<ReactNode>) {
   useEffect(() => {
     window.addEventListener("resize", handleWindowState);
     return () => window.removeEventListener("resize", handleWindowState);
-  }, []);
+  }, [handleWindowState]);
+
   const state = { width };
   Object.freeze(state);
   return <NuContext.Provider value={state}>{children}</NuContext.Provider>;

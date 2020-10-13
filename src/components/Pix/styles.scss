@@ -15,6 +15,9 @@ main {
     @include grid;
     padding: 5rem 4rem 4rem;
   }
+  @media (min-width:$tablet-lg) {
+    height: 100vh;
+  }
   > aside {
     @media (min-width:$tablet-lg) {
       padding: 10rem;

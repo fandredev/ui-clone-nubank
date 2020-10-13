@@ -8,7 +8,7 @@ import { NuContext } from "../../../context/NuContext";
 const Items: React.FC = () => {
   const ref = createRef<HTMLLIElement>();
 
-  useEffect(() => ref.current?.focus(), []);
+  useEffect(() => ref.current?.focus(), [ref]);
 
   const context = useContext(NuContext);
   const { width } = context;
