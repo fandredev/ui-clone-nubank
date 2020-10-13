@@ -46,6 +46,9 @@ section[id="credit-card"] {
       }
   }
   > figure {
+    @media (min-width:$tablet-lg) {
+      align-self: self-end
+    }
     @include flexCenter;
     > img {
       @include flexCenter;

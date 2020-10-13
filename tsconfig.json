@@ -18,9 +18,9 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    // "noEmitHelpers": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true
+    "noEmitHelpers": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
   },
   "include": [
     "src"

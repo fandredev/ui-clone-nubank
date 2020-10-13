@@ -44,6 +44,17 @@
             ".tsx"
           ]
         }
-      ]
+      ],
+      "import-helpers/order-imports": ["warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^react/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true
+        }
+      }
+    ]
     }
 }
